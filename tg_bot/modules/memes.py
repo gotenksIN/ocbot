@@ -135,8 +135,10 @@ def zalgotext(bot: Bot, update: Update):
 
 # Less D A N K modules by @skittles9823 # holi fugg I did some maymays ^^^
 
-# no help string
-
+__help__ = """
+ many memz
+ Thanks @deletescape for the meme commands :D
+"""
 __mod_name__ = "Memes"
 
 COPYPASTA_HANDLER = DisableAbleCommandHandler("😂", copypasta)
