@@ -23,11 +23,7 @@ Hi {}, my name is {}! If you have any questions on how to use me, read /help - a
 
 I'm a group manager bot maintained by [this wonderful person](tg://user?id={}). I'm built in python3, using the \
 python-telegram-bot library, and am fully opensource - you can find what makes me tick \
-<<<<<<< HEAD
 [here](github.com/gotenksIN/ocbot)!
-=======
-[here](github.com/songotenks69/ocbot)!
->>>>>>> 12cb384... Update __main__.py
 
 You can find the list of available commands with /help.
 """
