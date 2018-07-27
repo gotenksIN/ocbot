@@ -97,8 +97,6 @@ def vapor(bot: Bot, update: Update, args: List[str]):
     reply_text = str(data).translate(WIDE_MAP)
     message.reply_to_message.reply_text(reply_text)
 
-__help__ = "many memz"  # no help string
-=======
 # D A N K modules by @deletescape ^^^
 # Less D A N K modules by @skittles9823 # holi fugg I did some maymays vvv
 
