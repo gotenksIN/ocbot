@@ -233,7 +233,7 @@ def info(bot: Bot, update: Update, args: List[str]):
     elif not msg.reply_to_message and (not args or (
             len(args) >= 1 and not args[0].startswith("@") and not args[0].isdigit() and not msg.parse_entities(
         [MessageEntity.TEXT_MENTION]))):
-        msg.reply_text("I can't extract a user from this.")
+        msg.reply_text("Yeah nah, this mans doesn't exist.")
         return
 
     else:
@@ -263,8 +263,8 @@ def info(bot: Bot, update: Update, args: List[str]):
                         "Not quite a sudo user, but can still gban, gmute or even gkick you off the map."
 
             if user.id in WHITELIST_USERS:
-                text += "\nThis person has been whitelisted! " \
-                        "That means I'm not allowed to ban/kick them."
+                text += "\nThis person is Anirudh! " \
+                        "I feel bad for them, so I'm not going to ban/kick them."
 
     for mod in USER_INFO:
         mod_info = mod.__user_info__(user.id).strip()
@@ -327,16 +327,6 @@ def echo(bot: Bot, update: Update):
         message.reply_text(args[1], quote=False)
     message.delete()
 
-<<<<<<< HEAD
-=======
-
-def ping(bot: Bot, update: Update):
-    start_time = time.time()
-    requests.get('https://api.telegram.org')
-    end_time = time.time()
-    ping_time = float(end_time - start_time)*1000
-    update.effective_message.reply_text(" Ping speed was : {}ms".format(ping_time))
->>>>>>> 42761e0... Move sticker commands to its own module and clean up some stuff
 
 @run_async
 def gdpr(bot: Bot, update: Update):
@@ -401,6 +391,8 @@ __help__ = """
  - /slap: slap a user, or get slapped if not a reply.
  - /info: get information about a user.
  - /gdpr: deletes your information from the bot's database. Private chats only.
+ - /safemode <on/off/yes/no>: Disallows new users to send media for 24 hours after joining a group.
+    Use unmute to unrestrict them.
 
  - /markdownhelp: quick summary of how markdown works in telegram - can only be called in private chats.
 """
