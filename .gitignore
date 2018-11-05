@@ -5,3 +5,5 @@ tg_bot/config.py
 .pydevproject
 .directory
 .vscode
+/tg_bot/.vscode/*
+/.vscode/*
