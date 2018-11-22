@@ -7,3 +7,7 @@ psycopg2-binary
 feedparser
 spongemock
 zalgo-text
+pyowm
+nltk
+aiohttp>=2.2.5
+Pillow>=4.2.0
