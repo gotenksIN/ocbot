@@ -59,23 +59,12 @@ def reply_afk(bot: Bot, update: Update):
                 return
 
             if sql.is_afk(user_id):
-<<<<<<< HEAD
-                valid, reason = sql.check_afk_status(user_id)
-                if valid:
-                    if not reason:
-                        res = "{} is AFK!".format(fst_name)
-                    else:
-                        res = "{} is AFK! says its because of:\n{}".format(fst_name, reason)
-                    message.reply_text(res)
-
-=======
                 user = sql.check_afk_status(user_id)
                 if not user.reason:
                     res = "{} isn't here bud.".format(fst_name)
                 else:
                     res = "{} is AFK! says its because of:\n{}".format(fst_name, user.reason)
                     message.reply_text(res)
->>>>>>> 7350b14... Set custom strings boiii
 
 def __gdpr__(user_id):
     sql.rm_afk(user_id)
